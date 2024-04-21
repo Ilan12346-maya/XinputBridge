@@ -19,7 +19,7 @@ object OverlayManager {
 
 
     private lateinit var processInput: ProcessInput
-    val wine_gamepad by lazy {NetworkManager()}
+    val wine_gamepad = NetworkManager()
     private var wine_gamepadName = "No Gamepad"
 
 
