@@ -9,7 +9,6 @@ import android.view.View
 class MainActivity : AppCompatActivity() {
 
     private lateinit var permissionManager: PermissionManager
-    val networkManager by lazy {NetworkManager(this)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -20,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        OverlayManager.setNetworkManager(networkManager)
 
         permissionManager = PermissionManager(this)
 
@@ -51,14 +49,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startOverlayService() {
-    
-        networkManager.startServer()
+
         startService(Intent(this, OverlayService::class.java))
     }
 
     private fun stopOverlayService() {
         stopService(Intent(this, OverlayService::class.java))
-        networkManager.stopServer()
+    //    networkManager.stopServer()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

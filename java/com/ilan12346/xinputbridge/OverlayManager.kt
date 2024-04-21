@@ -19,12 +19,9 @@ object OverlayManager {
 
 
     private lateinit var processInput: ProcessInput
-    private lateinit var wine_gamepad: NetworkManager
+    val wine_gamepad by lazy {NetworkManager()}
     private var wine_gamepadName = "No Gamepad"
 
-    fun setNetworkManager(manager: NetworkManager) {
-        wine_gamepad = manager
-    }
 
     private fun showToast(context: Context, message: String) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
@@ -36,6 +33,7 @@ object OverlayManager {
 
     @SuppressLint("ClickableViewAccessibility")
     fun showOverlay(context: Context, initialX: Int, initialY: Int) {
+        wine_gamepad.startServer()
         processInput = ProcessInput()
 
         val connectedGamepads =  InputDevice.getDeviceIds().filter {
@@ -163,7 +161,7 @@ object OverlayManager {
         }
 
     fun removeOverlay(context: Context) {
-
+        wine_gamepad.stopServer()
         val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         overlayView?.let {
             windowManager.removeView(it)

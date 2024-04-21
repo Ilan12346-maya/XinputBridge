@@ -6,7 +6,8 @@ import java.net.DatagramSocket
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
-class NetworkManager(private val context: Context) {
+//class NetworkManager(private val context: Context) {
+class NetworkManager() {
     private lateinit var socket: DatagramSocket
 
 
