@@ -32,7 +32,8 @@ Copy 64-bit files to: `usr/glibc/opt/wine/<container_version>/wine/lib/wine/x86_
 
 ## Compatibility
 
-This implementation has been tested on Redmagic 8S Pro with Android 13. It supports Xbox One and Gamesir X2 gamepads. Bluetooth connectivity should work, although it hasn't been tested yet.
+This implementation has been tested on Redmagic 8S Pro with Android 13 with Xbox One and Gamesir X2 gamepad. Bluetooth connectivity should work, although it hasn't been tested yet.
+Any gamepad recognized by Android should work.
 
 ## Contribution
 
