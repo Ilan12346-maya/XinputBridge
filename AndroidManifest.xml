@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ilan12346.xinputbridge"
+    android:versionCode="1"
+    android:versionName="0.1_alpha">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_VIBRATOR"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="Xinput Bridge"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Deklaration der zweiten Aktivität -->
+        <activity android:name=".SecondActivity" />
+
+        <!-- Service Deklaration -->
+        <service android:name=".OverlayService" />
+
+    </application>
+</manifest>
