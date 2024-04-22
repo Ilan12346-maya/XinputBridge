@@ -1,6 +1,7 @@
 package com.ilan12346.xinputbridge
 
 import android.view.InputDevice
+import android.view.InputEvent
 import android.view.MotionEvent
 import kotlin.math.round
 
@@ -138,5 +139,8 @@ class ProcessInput {
             return stringBuilder.toString()
         }
 
-
+    fun inputFromGamepad(event: InputEvent): Boolean {
+        return event.source and InputDevice.SOURCE_GAMEPAD == InputDevice.SOURCE_GAMEPAD ||
+                event.source and InputDevice.SOURCE_JOYSTICK == InputDevice.SOURCE_JOYSTICK
+    }
 }
