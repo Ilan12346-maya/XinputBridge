@@ -55,6 +55,10 @@ For now this isn't supported as can be readed on [#2](https://github.com/Ilan123
 
 Contributions to this project are welcome! Feel free to report any issues or suggest improvements by opening an issue or a pull request.
 
+## Support
+
+Found any problem? Join our [Telegram](https://t.me/+YLyovfrXSeYwMmUy) or just open a [new issue](https://github.com/Ilan12346-maya/XinputBridge/issues/new).
+
 ## License
 
 This project is licensed under the GNU General Public License Version 3.0 (GPL-3.0). Everyone is entitled to improve the project and use it for meaningful purposes as long as the terms of the GPL-3.0 license are complied with. For more information, see the [LICENSE](LICENSE) file.
