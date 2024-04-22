@@ -22,6 +22,12 @@ Copy 64-bit files to: `usr/glibc/<wine_version>/lib/wine/x86_64-windows`
 
 *Note: Replace `<wine_version>` with the appropriate wine version. Currently, it might be "wine-9.3-vanilla-wow64".
 
+You can also install all directly by termux:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+```console
+cp -r /storage/emulated/0/Download/winefiles/winefiles/32/* $PREFIX/glibc/<wine_version>/lib/wine/i386-windows
+cp -r /storage/emulated/0/Download/winefiles/winefiles/64/* $PREFIX/glibc/<wine_version>/lib/wine/x86_64-windows
+```
+
 ### DarkOS:
 
 Copy 32-bit files to: `usr/glibc/opt/wine/<container_version>/wine/lib/wine_i386-windows`
@@ -35,9 +41,23 @@ Copy 64-bit files to: `usr/glibc/opt/wine/<container_version>/wine/lib/wine/x86_
 This implementation has been tested on Redmagic 8S Pro with Android 13 with Xbox One and Gamesir X2 gamepad. Bluetooth connectivity should work, although it hasn't been tested yet.
 Any gamepad recognized by Android should work.
 
+## Frequently Asked Questions
+
+### With this is possible to play with gamepad any game?
+
+The game needs to be compatible with XInput. Generally speaking, all modern games are compatible, but older games, like NFSU2, need a patch for that.
+
+### Can I use L2/R2 as triggers instead of buttons?
+
+For now this isn't supported as can be readed on [#2](https://github.com/Ilan12346-maya/XinputBridge/issues/2).
+
 ## Contribution
 
 Contributions to this project are welcome! Feel free to report any issues or suggest improvements by opening an issue or a pull request.
+
+## Support
+
+Found any problem? Join our [Telegram](https://t.me/+YLyovfrXSeYwMmUy) or just open a [new issue](https://github.com/Ilan12346-maya/XinputBridge/issues/new).
 
 ## License
 
