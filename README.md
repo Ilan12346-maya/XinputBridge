@@ -22,6 +22,12 @@ Copy 64-bit files to: `usr/glibc/<wine_version>/lib/wine/x86_64-windows`
 
 *Note: Replace `<wine_version>` with the appropriate wine version. Currently, it might be "wine-9.3-vanilla-wow64".
 
+You can also install all directly by termux:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+```console
+cp -r /storage/emulated/0/Download/winefiles/winefiles/32/* $PREFIX/glibc/<wine_version>/lib/wine/i386-windows
+cp -r /storage/emulated/0/Download/winefiles/winefiles/64/* $PREFIX/glibc/<wine_version>/lib/wine/x86_64-windows
+```
+
 ### DarkOS:
 
 Copy 32-bit files to: `usr/glibc/opt/wine/<container_version>/wine/lib/wine_i386-windows`
@@ -29,12 +35,6 @@ Copy 32-bit files to: `usr/glibc/opt/wine/<container_version>/wine/lib/wine_i386
 Copy 64-bit files to: `usr/glibc/opt/wine/<container_version>/wine/lib/wine/x86_64-windows`
 
 *Note: Replace `<container_version>` with the appropriate container version.
-
-You can also install all directly by termux:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-```console
-cp -r /storage/emulated/0/Download/winefiles/winefiles/32/* $PREFIX/glibc/<container_version>/lib/wine/i386-windows
-cp -r /storage/emulated/0/Download/winefiles/winefiles/64/* $PREFIX/glibc/<container_version>/lib/wine/x86_64-windows
-```
 
 ## Compatibility
 
