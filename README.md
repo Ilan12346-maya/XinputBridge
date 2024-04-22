@@ -49,7 +49,7 @@ The game needs to be compatible with XInput. Generally speaking, all modern game
 
 ### Can I use L2/R2 as triggers instead of buttons?
 
-For now this isn't supported as can be readed on #2.
+For now this isn't supported as can be readed on [#2](https://github.com/Ilan12346-maya/XinputBridge/issues/2).
 
 ## Contribution
 
