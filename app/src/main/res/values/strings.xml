@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">XinputBridge</string>
+    <string name="github_link"><a href='https://github.com/Ilan12346-maya/XinputBridge\'>Github</a></string>
+    <string name="how_to_use">How to use:\n1. Grant permissions\n2. Click to start the service\n3. A red flag on the top-left border should appear. Click on it to block touch and enable gamepad. If you click again you disable gamepad and enable touch.</string>
+    <string name="gamepad_info">Gamepad info</string>
+    <string name="grant_permissions">Grant permissions</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="start_service">Start Service</string>
 
 </resources>
