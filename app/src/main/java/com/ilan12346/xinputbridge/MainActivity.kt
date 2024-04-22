@@ -13,9 +13,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
-
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -26,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val stopServiceButton: Button = findViewById(R.id.stopServiceButton)
         val grantPermissionsButton: Button = findViewById(R.id.grantPermissionsButton)
         val startSecondActivityButton: Button = findViewById(R.id.startSecondActivityButton)
-        
+
         startSecondActivityButton.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
@@ -34,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         startServiceButton.setOnClickListener { startOverlayService() }
         stopServiceButton.setOnClickListener { stopOverlayService() }
-        
+
         grantPermissionsButton.setOnClickListener {
             if (!permissionManager.checkOverlayPermission()) {
                 permissionManager.requestOverlayPermission()
@@ -55,13 +52,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun stopOverlayService() {
         stopService(Intent(this, OverlayService::class.java))
-    //    networkManager.stopServer()
+        //    networkManager.stopServer()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         permissionManager.onActivityResult(requestCode, resultCode, data)
     }
-    
-    
+
+
 }

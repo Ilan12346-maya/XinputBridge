@@ -8,6 +8,7 @@ class ProcessInput {
 
     private var Analog_Trigger = false
 
+
     var BUTTON_START = false
     var BUTTON_SELECT = false
     var BUTTON_R1 = false
@@ -27,7 +28,6 @@ class ProcessInput {
     var DPAD: Short = 255
 
 
-
     fun processMotionEvent(event: MotionEvent) {
         if (event.isFromSource(InputDevice.SOURCE_JOYSTICK)) {
             val xFloat = event.getAxisValue(MotionEvent.AXIS_X)
@@ -40,36 +40,36 @@ class ProcessInput {
             val ltFloat = event.getAxisValue(MotionEvent.AXIS_LTRIGGER)
 
             // Umrechnung in den Bereich von -32,768 bis 32,767
-            STICK_LX = (xFloat * 32767).toInt().toShort()
-            STICK_LY = (yFloat * 32767).toInt().toShort()
-            STICK_RX = (zFloat * 32767).toInt().toShort()
-            STICK_RY = (rzFloat * 32767).toInt().toShort()
-          var  TRIGGER_R = (rtFloat * 32767).toInt().toShort()
-           var TRIGGER_L = (ltFloat * 32767).toInt().toShort()
+            STICK_LX = ((xFloat * 327).toInt() * 100).toShort()
+            STICK_LY = ((yFloat * 327).toInt() * 100).toShort()
+            STICK_RX = ((zFloat * 327).toInt() * 100).toShort()
+            STICK_RY = ((rzFloat * 327).toInt() * 100).toShort()
+            var TRIGGER_R = ((rtFloat * 10).toInt()).toShort()
+            var TRIGGER_L = ((ltFloat * 10).toInt()).toShort()
 
-            if(TRIGGER_R> 3000) {
+            if (TRIGGER_R > 3) {
                 BUTTON_R2 = true
                 Analog_Trigger = true
             }
 
-            if(TRIGGER_R < 3000) {
+            if (TRIGGER_R < 3) {
                 if (Analog_Trigger) {
                     BUTTON_R2 = false
                 }
             }
 
-            if(TRIGGER_L> 3000) {
+            if (TRIGGER_L > 3) {
                 BUTTON_L2 = true
                 Analog_Trigger = true
             }
 
-            if(TRIGGER_L < 3000) {
+            if (TRIGGER_L < 3) {
                 if (Analog_Trigger) {
                     BUTTON_L2 = false
                 }
             }
 
-            
+
             val dx = round(dxFloat.toDouble()).toInt()
             val dy = round(dyFloat.toDouble()).toInt()
 
@@ -94,14 +94,15 @@ class ProcessInput {
             106 -> BUTTON_L3 = pressed
 
 
-
         }
 
 
     }
 
+
     private fun getDpadDirection(dx: Int, dy: Int): Short {
         return when {
+
             dx == 0 && dy == -1 -> 0 // DPAD_N
             dx == 1 && dy == -1 -> 1 // DPAD_NE
             dx == 1 && dy == 0 -> 2  // DPAD_E

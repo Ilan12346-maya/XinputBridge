@@ -19,7 +19,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
         gamepadInputView = findViewById(R.id.gamepadInputView)
-          gamepadNameTextView = findViewById(R.id.gamepadNameTextView)
+        gamepadNameTextView = findViewById(R.id.gamepadNameTextView)
         processInput = ProcessInput()
 
         val backButton = findViewById<TextView>(R.id.refreshButton)
