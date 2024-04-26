@@ -16,7 +16,7 @@ Additionally, I utilized AndroidIDE for building most of the components. You can
 
 ### ⚠️⚠️⚠️ WARNING ⚠️⚠️⚠️
 
-After installing the DLLs mentioned below, games will only function if xinputbridge is open. If it's closed, most games might not start. This behavior is expected in the current version, and due to this, as well as issues with some games, Generaly as well as workaround it's recommended to utilize a separate container. 
+After installing the DLLs mentioned below, games will only function if xinputbridge is open. If it's closed, most games might not start. This behavior is expected in the current version. Generaly as well as workaround it's recommended to utilize a separate container. 
 Apparently, on DarkOS, wine8.18 wow64 offers more stability. 
 
 If this bothers you, we suggest waiting for the next version.
