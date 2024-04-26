@@ -14,6 +14,10 @@ Additionally, I utilized AndroidIDE for building most of the components. You can
 
 ## Installation Instructions
 
+### ⚠️⚠️⚠️ WARNING ⚠️⚠️⚠️
+
+After installing the DLLs below, any game will only work if xinputbridge is open.  If it is closed the game will be completely black.  This is an expected behavior of the current version and if it bothers you we recommend that you wait for the next version.
+
 ### Mobox:
 
 Copy 32-bit files to: `usr/glibc/<wine_version>/lib/wine/i386-windows`
