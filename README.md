@@ -16,7 +16,10 @@ Additionally, I utilized AndroidIDE for building most of the components. You can
 
 ### ⚠️⚠️⚠️ WARNING ⚠️⚠️⚠️
 
-After installing the DLLs below, any game will only work if xinputbridge is open.  If it is closed the game will be completely black.  This is an expected behavior of the current version and if it bothers you we recommend that you wait for the next version.
+After installing the DLLs below, any game will only work if xinputbridge is open.  If it is closed the game will be completely black.  This is an expected behavior of the current version.
+it's recommended to use a separate container; apparently, (darkos) wine8.18 wow64 is more stable.
+if this bothers you we recommend that you wait for the next version.
+
 
 ### Mobox:
 
