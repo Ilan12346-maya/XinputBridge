@@ -56,12 +56,16 @@ object OverlayManager {
                 150,
                 150,
                 WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                        or WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+                        or WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 PixelFormat.TRANSLUCENT
             ).apply {
                 gravity = Gravity.TOP or Gravity.START
             }
             layoutParams = params
+            systemUiVisibility = (View.SYSTEM_UI_FLAG_FULLSCREEN
+                    or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION) // Hinzufügen der Flag SYSTEM_UI_FLAG_HIDE_NAVIGATION
             setOnTouchListener { _, event ->
                 if (event.action == MotionEvent.ACTION_DOWN) {
                     val x = event.rawX.toInt()
@@ -75,6 +79,25 @@ object OverlayManager {
                 }
             }
             setOnKeyListener { _, keyCode, event ->
+                if (isActive and wine_gamepad.ready) {
+                    if (event.action == KeyEvent.ACTION_DOWN) {
+                        processInput.setButtonState(keyCode, true)
+                        sendGamePad_BUTTONS()
+                        true
+                    } else if (event.action == KeyEvent.ACTION_UP) {
+                        processInput.setButtonState(keyCode, false)
+                        sendGamePad_BUTTONS()
+                        true
+                    } else {
+                        false
+                    }
+                } else {
+                    false
+                }
+            }
+        
+
+        setOnKeyListener { _, keyCode, event ->
                 if (isActive and wine_gamepad.ready) {
                     if (event.action == KeyEvent.ACTION_DOWN) {
                         processInput.setButtonState(keyCode, true)

@@ -43,18 +43,30 @@ class SecondActivity : AppCompatActivity() {
     }
 
     override fun onKeyUp(keyCode: Int, event: KeyEvent): Boolean {
+        if (!processInput.inputFromGamepad(event)) {
+            return false
+        }
+
         processInput.setButtonState(keyCode, false)
         gamepadInputView.text = processInput.InputStates
         return true
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+        if (!processInput.inputFromGamepad(event)) {
+            return false
+        }
+
         processInput.setButtonState(keyCode, true)
         gamepadInputView.text = processInput.InputStates
         return true
     }
 
     override fun onGenericMotionEvent(event: MotionEvent): Boolean {
+        if (!processInput.inputFromGamepad(event)) {
+            return false
+        }
+
         processInput.processMotionEvent(event)
         gamepadInputView.text = processInput.InputStates
         return super.onGenericMotionEvent(event)
