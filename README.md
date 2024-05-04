@@ -14,12 +14,11 @@ Additionally, I utilized AndroidIDE for building most of the components. You can
 
 ## Installation Instructions
 
-### ⚠️⚠️⚠️ WARNING ⚠️⚠️⚠️
+Generaly it's recommended to utilize a separate container. 
 
-After installing the DLLs mentioned below, games will only function if xinputbridge is open. If it's closed, most games might not start. This behavior is expected in the current version. Generaly as well as workaround it's recommended to utilize a separate container. 
-Apparently, on DarkOS, wine8.18 wow64 offers more stability. 
+wine 9.3 should be the most stable atm.
 
-If this bothers you, we suggest waiting for the next version.
+
 
 
 ### Mobox:
@@ -35,6 +34,9 @@ You can also install all directly by termux:
 cp -r /storage/emulated/0/Download/winefiles/winefiles/32/* $PREFIX/glibc/<wine_version>/lib/wine/i386-windows
 cp -r /storage/emulated/0/Download/winefiles/winefiles/64/* $PREFIX/glibc/<wine_version>/lib/wine/x86_64-windows
 ```
+
+set all xinput dlls to Buildin than Nativ on winecfg -> libarys
+
 
 ### DarkOS:
 
