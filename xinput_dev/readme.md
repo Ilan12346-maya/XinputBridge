@@ -12,7 +12,7 @@
 
 - [Wine Repository by wine-mirror](https://github.com/wine-mirror/wine.git)
 
-1. Change the path in `prepare` and `compile_xinput.sh` to the correct working directory.
+1. Change the path in `prepare.sh` and `compile_xinput.sh` to the correct working directory.
 
 2. Navigate to the `work_temp` directory and download Wine by running:
 
