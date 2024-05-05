@@ -22,7 +22,6 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  *
  *
- *
  * uses of modified main.c from brunodev85	
  *
  * https://github.com/brunodev85/winlator.git
