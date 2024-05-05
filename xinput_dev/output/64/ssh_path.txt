@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/glibc/opt/wine/3/wine/lib/wine/x86_64-windows
