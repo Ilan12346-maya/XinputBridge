@@ -1,24 +1,16 @@
-## Easy and Fast Xinput Compilation - YEAH!
+### Easy and Fast Xinput Compilation - YEAH!
 
+#### Use of modified Scripts from Kron4ek
 
+- [Wine-Builds Repository by Kron4ek](https://github.com/Kron4ek/Wine-Builds.git)
 
-# uses of modified Scripts from Kron4ek
-	
-https://github.com/Kron4ek/Wine-Builds.git
+#### Use of modified main.c from brunodev85
 
+- [Winlator Repository by brunodev85](https://github.com/brunodev85/winlator.git)
 
+#### Use of Wine from wine-mirror
 
-# uses of modified main.c from brunodev85
-	
-https://github.com/brunodev85/winlator.git
-
-
-
-# use of wine from wine-mirror
-	
-https://github.com/wine-mirror/wine.git
-
-
+- [Wine Repository by wine-mirror](https://github.com/wine-mirror/wine.git)
 
 1. Change the path in `prepare` and `compile_xinput.sh` to the correct working directory.
 
@@ -30,9 +22,7 @@ https://github.com/wine-mirror/wine.git
     
     Replace `wine-9.3` with whichever version you prefer.
     
-    There have to be an wine folder inside work_temp folder now.
-
-
+    There have to be a wine folder inside the work_temp folder now.
 
    - If you haven't already, execute `create_ubuntu_bootstraps.sh` once.
    
