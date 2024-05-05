@@ -2,21 +2,21 @@
 
 
 
-	uses of modified Scripts from Kron4ek
+# uses of modified Scripts from Kron4ek
 	
-	https://github.com/Kron4ek/Wine-Builds.git
+https://github.com/Kron4ek/Wine-Builds.git
 
 
 
-	uses of modified main.c from brunodev85
+# uses of modified main.c from brunodev85
 	
-	https://github.com/brunodev85/winlator.git
+https://github.com/brunodev85/winlator.git
 
 
 
-	use of wine from wine-mirror
+# use of wine from wine-mirror
 	
-	https://github.com/wine-mirror/wine.git
+https://github.com/wine-mirror/wine.git
 
 
 
