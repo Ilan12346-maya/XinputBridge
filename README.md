@@ -16,7 +16,7 @@ Additionally, I utilized AndroidIDE for building most of the components. You can
 
 Download winefiles_with_install.zip and run install_winefiles.exe
 
-the code of the installer is at xinput_dev\output\install.ahk
+the source of the [installer](https://github.com/Ilan12346-maya/XinputBridge/blob/main/xinput_dev/output/install.ahk). 
 
 Generaly it's recommended to utilize a separate container. 
 
