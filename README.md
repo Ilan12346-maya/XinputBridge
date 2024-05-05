@@ -12,7 +12,7 @@ I would also like to extend my thanks to brunodev85 for providing the Wine libra
 
 Additionally, I utilized AndroidIDE for building most of the components. You can check out AndroidIDE at [AndroidIDEOfficial/AndroidIDE](https://github.com/AndroidIDEOfficial/AndroidIDE).
 
-## Installation Instructions
+# Installation Instructions
 
 Download winefiles_with_install.zip and run install_winefiles.exe
 
@@ -22,7 +22,7 @@ Generaly it's recommended to utilize a separate container.
 
 wine 9.3 should be the most stable atm.
 
-# Installation Manual
+## Installation Manual
 
 
 ### Mobox:
