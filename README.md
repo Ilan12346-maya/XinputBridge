@@ -14,11 +14,15 @@ Additionally, I utilized AndroidIDE for building most of the components. You can
 
 ## Installation Instructions
 
+Download winefiles_with_install.zip and run install_winefiles.exe
+
+the code of the installer is at xinput_dev\output\install.ahk
+
 Generaly it's recommended to utilize a separate container. 
 
 wine 9.3 should be the most stable atm.
 
-
+# Installation Manual
 
 
 ### Mobox:
