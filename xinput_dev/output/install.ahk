@@ -48,7 +48,6 @@ IfMsgBox, Yes
     
    	path32 :=  SelectedPath
 	path32 .= path32_add
-msgbox, % path32
 	CopyFolder("32\", path32 )
 
 	path64 :=  SelectedPath
