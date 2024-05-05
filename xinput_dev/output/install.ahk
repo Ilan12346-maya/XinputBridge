@@ -109,7 +109,7 @@ CopyFolder(from, to)
 {
     Loop, %from%\*
     {
-        FileCopy, %A_LoopFileFullPath%, %to%\%A_LoopFileName%
+        FileCopy, %A_LoopFileFullPath%, %to%\%A_LoopFileName%, 1
     }
 }
 
