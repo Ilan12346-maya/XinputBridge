@@ -1,24 +1,23 @@
 ## Easy and Fast Xinput Compilation - YEAH!
 
-#######################################################
-#
-#	uses of modified Scripts from Kron4ek
-#	
-#	https://github.com/Kron4ek/Wine-Builds.git
-#
-#######################################################
-#
-#	uses of modified main.c from brunodev85
-#	
-#	https://github.com/brunodev85/winlator.git
-#
-#######################################################
-#
-#	use of wine from wine-mirror
-#	
-#	https://github.com/wine-mirror/wine.git
-#
-#######################################################
+
+
+	uses of modified Scripts from Kron4ek
+	
+	https://github.com/Kron4ek/Wine-Builds.git
+
+
+
+	uses of modified main.c from brunodev85
+	
+	https://github.com/brunodev85/winlator.git
+
+
+
+	use of wine from wine-mirror
+	
+	https://github.com/wine-mirror/wine.git
+
 
 
 1. Change the path in `prepare` and `compile_xinput.sh` to the correct working directory.
