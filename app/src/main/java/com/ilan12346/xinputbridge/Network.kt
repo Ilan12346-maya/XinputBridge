@@ -7,7 +7,9 @@ import java.nio.ByteOrder
 
 class NetworkManager() {
     private lateinit var socket: DatagramSocket
+    private lateinit var socket_check: DatagramSocket
     var ready = true
+    var running = true;
 
     private val gamepadNameBYTE = byteArrayOf(
         0x08.toByte(), 0x03.toByte(), 0x00.toByte(), 0x00.toByte(), 0x00.toByte(), 0x01.toByte(),
@@ -72,7 +74,13 @@ class NetworkManager() {
     var RIGHT_X = 0
     var RIGHT_Y = 0
 
+
+
+
+
     fun startServer() {
+
+        running = true;
         Thread {
             val port = 7947
 
@@ -97,7 +105,33 @@ class NetworkManager() {
                 e.printStackTrace()
             }
         }.start()
+
+
+        Thread {
+            val port = 7949
+
+            try {
+                socket_check = DatagramSocket(port)
+
+
+                while (running) {
+                    Thread.sleep(100)
+
+
+                    }
+
+                socket_check.close();
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }.start()
+
+
+
     }
+
+
 
     private fun generateResponse(firstByte: Byte?): ByteArray {
         return when (firstByte?.toInt()) {
@@ -116,9 +150,20 @@ class NetworkManager() {
     }
 
     fun stopServer() {
+
+
+
         if (::socket.isInitialized && !socket.isClosed) {
             socket.close()
+
         }
+
+        if (:: socket_check.isInitialized && !socket_check.isClosed) {
+            socket_check.close()
+
+        }
+
+        running = false
     }
 
     fun setGamepadName(name: String) {

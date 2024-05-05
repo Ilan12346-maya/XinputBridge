@@ -35,6 +35,7 @@ object OverlayManager {
     fun showOverlay(context: Context, initialX: Int, initialY: Int) {
 
         wine_gamepad.startServer()
+
         processInput = ProcessInput()
 
         val connectedGamepads = InputDevice.getDeviceIds().filter {
