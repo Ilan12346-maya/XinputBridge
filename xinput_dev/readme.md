@@ -20,7 +20,7 @@
     git clone --branch wine-9.3 https://github.com/wine-mirror/wine.git
     ```
     
-    Replace `wine-9.3` with whichever version you prefer.
+    Replace `wine-9.3` with the version you prefer.
     
     There have to be a wine folder inside the work_temp folder now.
 
