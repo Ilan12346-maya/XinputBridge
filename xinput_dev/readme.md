@@ -10,7 +10,7 @@
 
 #### Use of Wine from wine-mirror
 
-- [Wine Repository by wine-mirror](https://github.com/wine-mirror/wine.git)
+- [Wine-mirror Repository](https://github.com/wine-mirror/wine.git)
 
 1. Change the path in `prepare.sh` and `compile_xinput.sh` to the correct working directory.
 
