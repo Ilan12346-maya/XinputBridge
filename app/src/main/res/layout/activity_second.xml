@@ -12,17 +12,17 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:textSize="24sp" />
-    
+        android:textSize="18sp" />
+
+
     <TextView
         android:id="@+id/gamepadInputView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/gamepadNameTextView"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="17dp"
         android:gravity="center"
-        android:textSize="24sp" />
-
+        android:textSize="13sp" />
 
     <Button
         android:id="@+id/refreshButton"
