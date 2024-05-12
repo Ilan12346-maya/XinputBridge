@@ -4,12 +4,26 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+import android.widget.Toast
+import android.content.Context
+import android.os.Handler
+import android.os.Looper
 
-class NetworkManager() {
+
+class NetworkManager {
     private lateinit var socket: DatagramSocket
     private lateinit var socket_check: DatagramSocket
     var ready = true
-    var running = true;
+    var running = true
+    var fail = false
+    lateinit var context: Context
+
+
+    fun initializeContext(c: Context) {
+        context = c
+    }
+
+
 
     private val gamepadNameBYTE = byteArrayOf(
         0x08.toByte(), 0x03.toByte(), 0x00.toByte(), 0x00.toByte(), 0x00.toByte(), 0x01.toByte(),
@@ -75,10 +89,15 @@ class NetworkManager() {
     var RIGHT_Y = 0
 
 
+    private fun showToast(context: Context, message: String) {
+        Handler(Looper.getMainLooper()).post {
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        }
+    }
 
 
 
-    fun startServer() {
+    fun startServer(){
 
         running = true;
         Thread {
@@ -100,9 +119,13 @@ class NetworkManager() {
                         DatagramPacket(response, response.size, packet.address, packet.port)
 
                     socket.send(responsePacket)
+
                 }
             } catch (e: Exception) {
+
+                showToast(context, "Stop Service")
                 e.printStackTrace()
+
             }
         }.start()
 
@@ -123,7 +146,10 @@ class NetworkManager() {
                 socket_check.close();
 
             } catch (e: Exception) {
+
+
                 e.printStackTrace()
+
             }
         }.start()
 
@@ -150,6 +176,7 @@ class NetworkManager() {
     }
 
     fun stopServer() {
+
 
 
 
