@@ -61,16 +61,6 @@ evrything you will need is in "xinput_dev"
 
 Also main.c, modified version of brunos files [brunodev85/winlator](https://github.com/brunodev85/winlator/tree/main/wine_patches/dlls/xinput)
 
-testet on Ubuntu 22.04 with wine 9.3 and 9.7
-
-## Compile winefiles yourself
-
-Everything you will need is in "xinput_dev"
-
-Also, use the modified version of Bruno's files from [brunodev85/winlator](https://github.com/brunodev85/winlator/tree/main/wine_patches/dlls/xinput).
-
-Tested on Ubuntu 22.04 with Wine 9.3 and 9.7.
-
 
 ## Frequently Asked Questions
 
