@@ -20,6 +20,7 @@ object OverlayManager {
 
     private lateinit var processInput: ProcessInput
     val wine_gamepad = NetworkManager()
+
     private var wine_gamepadName = "No Gamepad"
 
 
@@ -34,6 +35,7 @@ object OverlayManager {
     @SuppressLint("ClickableViewAccessibility")
     fun showOverlay(context: Context, initialX: Int, initialY: Int) {
 
+        wine_gamepad.initializeContext(context)
         wine_gamepad.startServer()
 
         processInput = ProcessInput()
